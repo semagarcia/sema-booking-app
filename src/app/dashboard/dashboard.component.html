@@ -1,0 +1,58 @@
+<md-sidenav-layout fullscreen>
+    <md-sidenav #sidenav align="start" mode="over">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <!-- <img md-card-image src="assets/dashboard-reservations.jpg"> -->
+
+                <div class="sba-sidebar-profile-header-cover" >
+                    <div class="sba-sidebar-top-bar"></div>
+                    <!-- Sidebar brand image -->
+                    <div class="sba-sidebar-profile-pic">
+                        <img src="assets/user.jpg">
+                    </div>
+                    <!-- Sidebar brand name -->
+                    <div class="sba-sidebar-user-info">
+                        <span class="sba-sidebar-user-name">Sema García</span>
+                        <span class="sba-sidebar-user-mail">username@email.com</span>
+                    </div>
+                </div>
+
+                <md-list>
+                    <md-list-item><span md-prefix><i class="fa fa-user"></i></span>&nbsp; Pepper </md-list-item>
+                    <md-list-item><span md-prefix><i class="fa fa-user"></i></span>&nbsp; Salt </md-list-item>
+                    <hr />
+                    <md-list-item><span md-prefix><i class="fa fa-user"></i></span>&nbsp; Paprika </md-list-item>
+                </md-list>
+            </div>
+        </div>
+    </md-sidenav>
+
+    <md-toolbar color="primary">
+        <span>
+            <md-icon class="icon-45">dvr</md-icon>
+            SemaBookingApp
+        </span>
+        <button md-icon-button [md-menu-trigger-for]="menu">
+            <md-icon>more_vert</md-icon>
+        </button>
+    </md-toolbar>
+
+    <md-menu x-position="before" #menu="mdMenu">
+        <button md-menu-item (click)="sidenav.open()"><span md-prefix><i class="fa fa-user"></i></span>&nbsp; My profile</button>
+        <button md-menu-item (click)="sidenav.open()"><span md-prefix><i class="fa fa-bell"></i></span>&nbsp; Notifications</button>
+        <button md-menu-item>Help</button>
+    </md-menu>
+
+    <div class="container-fluid" style="padding-top:.75rem">
+        <!-- Router outlet -->
+        <router-outlet></router-outlet>
+
+        <!-- <div class="footer navbar-fixed-bottom">XXX</div> -->
+        <div class="navbar navbar-default navbar-fixed-bottom hidden-xs-down" style="background-color:#7b1fa2">
+            <div class="container-fluid">
+                <div class="col-xs-12 col-sm-6"><p class="navbar-text pull-left">© 2016 - Sema</p></div>
+                <div class="col-xs-12 col-sm-6"><p class="navbar-text pull-right">Follow me!</p></div>
+            </div>
+        </div>
+    </div>
+</md-sidenav-layout>

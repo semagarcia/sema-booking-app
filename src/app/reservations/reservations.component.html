@@ -1,0 +1,50 @@
+<div class="row" style="padding:2rem">
+    <h1>My reservations</h1>
+
+    <!--  -->
+    <md-input class="w-100" placeholder="Search" [(ngModel)]="search">
+        <span md-prefix><i class="fa fa-search"></i></span>
+    </md-input>
+
+    <!--  -->
+    <div class="table-responsive" style="padding-top:2rem">
+        <p><span><i class="fa fa-calendar" style="padding-right:.5rem"></i></span>Current reservations:</p>
+        <table class="table table-sm table-hover table-striped">
+            <thead>
+                <tr>
+                    <th><md-checkbox [(ngModel)]="selectAll"></md-checkbox></th>
+                    <th>Topic</th>
+                    <th>Date</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><md-checkbox [(ngModel)]="selectAll"></md-checkbox></td>
+                    <td>XX</td>
+                    <td>YY</td>
+                    <td>ZZ</td>
+                </tr>
+                <tr>
+                    <td><md-checkbox [(ngModel)]="selectAll"></md-checkbox></td>
+                    <td>AA</td>
+                    <td>BB</td>
+                    <td>CC</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!--  -->
+    <div class="row" style="padding-top:2rem">
+        <div class="col-xs-12 col-sm-12 col-md-4">
+            <button md-raised-button color="primary" (click)="openDetails()">Open / details</button>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4">
+            <button md-raised-button color="accent" (click)="delete()">Delete</button>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4">
+            <button md-raised-button color="accent" (click)="return()">Return back</button>
+        </div>
+    </div>
+</div>

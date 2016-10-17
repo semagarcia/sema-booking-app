@@ -1,0 +1,39 @@
+<div class="container" style="padding-top:2rem">
+    <div class="row">
+        <div class="col-xs-12
+                    col-sm-12
+                    offset-md-2 col-md-8
+                    offset-lg-3 col-lg-6"
+                    style="padding-bottom:1rem">
+            <md-card class="card-elevation-5">
+                <md-card-content>
+                    <h4>Sema Booking App</h4>
+                    <hr />
+                    <p>
+                        <md-input class="w-100" placeholder="Write your username" [(ngModel)]="username">
+                            <span md-prefix><i class="fa fa-user"></i></span>
+                        </md-input>
+                    </p>
+                    <p>
+                        <md-input class="w-100" placeholder="Write your password" type="password" (keyup.enter)="login()" [(ngModel)]="password">
+                            <span md-prefix><i class="fa fa-key"></i></span>
+                        </md-input>
+                    </p>
+                    <div style="margin: 0 auto; padding-top: 18px">
+                        <i><a [routerLink]="['/login/recovery-password']">He perdido mi contraseña</a></i>
+                    </div>
+                </md-card-content>
+                <md-card-actions>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                            <button md-raised-button color="primary" (click)="signUp()">Sing up!</button>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <button md-raised-button color="primary" (click)="login()">Login!</button>
+                        </div>
+                    </div>
+                </md-card-actions>
+            </md-card>
+        </div>
+    </div>
+</div>

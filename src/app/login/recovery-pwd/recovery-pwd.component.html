@@ -1,0 +1,30 @@
+<div class="container" style="padding-top:2rem">
+    <div class="row">
+        <div class="col-xs-12
+                    col-sm-12
+                    offset-md-2 col-md-8
+                    offset-lg-3 col-lg-6"
+                    style="padding-bottom:1rem">
+            <md-card class="card-elevation-5">
+                <md-card-content>
+                    <h4>Sema Booking App</h4>
+                    <hr />
+                    Insert your username in order to sent you an email with further details.
+                    <p>
+                        <md-input class="w-100" placeholder="Write your username" [(ngModel)]="username"></md-input>
+                    </p>
+                </md-card-content>
+                <md-card-actions>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                            <button md-raised-button color="primary" (click)="returnBack()">Return back</button>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <button md-raised-button color="primary" (click)="requestNewPwd()">Request!</button>
+                        </div>
+                    </div>
+                </md-card-actions>
+            </md-card>
+        </div>
+    </div>
+</div>

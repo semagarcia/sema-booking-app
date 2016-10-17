@@ -1,0 +1,66 @@
+<div class="row" style="padding:2rem">
+    <h1>Booking</h1>
+
+    <!--  -->
+    <md-input class="w-100" placeholder="Topic" [(ngModel)]="topic"></md-input>
+
+    <!--  -->
+    <md-input class="w-100" placeholder="Office" [(ngModel)]="office"></md-input>
+
+    <!--  -->
+    <md-input class="w-100" placeholder="Resource" [(ngModel)]="resource"></md-input>
+
+    <!--  -->
+    <md-input class="w-100" placeholder="Invited users" [(ngModel)]="users"></md-input>
+
+    <!--  -->
+    <div class="row" style="padding-top:1rem">
+        <div class="col-xs-12 col-sm-12 col-md-6">
+            Start date
+            <md-input class="w-100" placeholder="" [(ngModel)]="startDate" type="date">
+                <span md-prefix><i class="fa fa-calendar"></i></span>
+            </md-input>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6">
+            Start time
+            <md-input class="w-100" placeholder="" [(ngModel)]="startTime" type="time">
+                <span md-prefix><i class="fa fa-clock-o"></i></span>
+            </md-input>
+        </div>
+    </div>
+
+    <!--  -->
+    <div class="row" style="padding-top:1rem">
+        <div class="col-xs-12 col-sm-12 col-md-6">
+            <md-checkbox [checked]="false" [(ngModel)]="allDayEvent" aria-label="Whole day event" align="start">
+                Whole day event (all the day)
+            </md-checkbox>
+        </div>
+    </div>
+
+    <!--  -->
+    <div class="row" style="padding-top:1rem" *ngIf="!allDayEvent">
+        <div class="col-xs-12 col-sm-12 col-md-6">
+            End date
+            <md-input class="w-100" placeholder="" [(ngModel)]="endDate" type="date">
+                <span md-prefix><i class="fa fa-calendar"></i></span>
+            </md-input>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6">
+            End time
+            <md-input class="w-100" placeholder="" [(ngModel)]="endTime" type="time">
+                <span md-prefix><i class="fa fa-clock-o"></i></span>
+            </md-input>
+        </div>
+    </div>
+
+    <!--  -->
+    <div class="row" style="padding-top:1rem" *ngIf="!allDayEvent">
+        <div class="col-xs-12 col-sm-12 col-md-6">
+            <button md-raised-button color="primary" (click)="booking()">Booking</button>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6">
+            <button md-raised-button color="accent" (click)="cancel()">Cancel</button>
+        </div>
+    </div>
+</div>
