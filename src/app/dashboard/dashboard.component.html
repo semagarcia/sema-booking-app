@@ -18,10 +18,11 @@
                 </div>
 
                 <md-list>
-                    <md-list-item><span md-prefix><i class="fa fa-user"></i></span>&nbsp; Pepper </md-list-item>
-                    <md-list-item><span md-prefix><i class="fa fa-user"></i></span>&nbsp; Salt </md-list-item>
-                    <hr />
-                    <md-list-item><span md-prefix><i class="fa fa-user"></i></span>&nbsp; Paprika </md-list-item>
+                    <md-list-item><span md-prefix><i class="fa fa-user"></i></span>&nbsp; My profile </md-list-item>
+                    <md-list-item><span md-prefix><i class="fa fa-envelope-o"></i></span>&nbsp; Contact </md-list-item>
+                    <hr style="background-color:white" />
+                    <md-list-item><span md-prefix><i class="fa fa-question-circle"></i></span>&nbsp; Help... </md-list-item>
+                    <md-list-item><span md-prefix><i class="fa fa-info"></i></span>&nbsp; About </md-list-item>
                 </md-list>
             </div>
         </div>
@@ -38,9 +39,9 @@
     </md-toolbar>
 
     <md-menu x-position="before" #menu="mdMenu">
-        <button md-menu-item (click)="sidenav.open()"><span md-prefix><i class="fa fa-user"></i></span>&nbsp; My profile</button>
+        <button md-menu-item (click)="sidenav.open()"><span md-prefix><i class="fa fa-bars"></i></span>&nbsp; Menu</button>
         <button md-menu-item (click)="sidenav.open()"><span md-prefix><i class="fa fa-bell"></i></span>&nbsp; Notifications</button>
-        <button md-menu-item>Help</button>
+        <button md-menu-item><span md-prefix><i class="fa fa-sign-out"></i></span>&nbsp; Logout</button>
     </md-menu>
 
     <div class="container-fluid" style="padding-top:.75rem">
